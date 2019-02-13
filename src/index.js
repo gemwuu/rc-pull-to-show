@@ -1,6 +1,5 @@
 import React from 'react';
 import Gesture from 'rc-gesture';
-import './index.less';
 
 const rootFontSize = parseFloat(document.documentElement.style.fontSize || 100);
 
@@ -70,8 +69,22 @@ export default class PullToShow extends React.Component {
     return (
       <Gesture onPanStart={this.onStartStyle} onPanMove={this.onMoveStyle} onTouchEnd={this.onEndStyle}>
         <div className="pull-to-show-wrapper" ref={el => (this.el = el)} style={newStyle}>
-          <div className="pull-to-show-indicator-wrapper">{indicator}</div>
-          { children }
+          <div className="pull-to-show-indicator-wrapper">
+            <style jsx>
+              {`
+                .pull-to-show-indicator-wrapper {
+                  font-size: 0;
+                  line-height: 0;
+                }
+                .pull-to-show-indicator-wrapper > img {
+                  display: block;
+                  width: 100%;
+                }
+              `}
+            </style>
+            {indicator}
+          </div>
+          {children}
         </div>
       </Gesture>
     );
