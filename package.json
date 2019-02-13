@@ -1,6 +1,6 @@
 {
   "name": "rc-pull-to-show",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React Component, pull down the page to show an extra image.",
   "main": "lib/index.js",
   "scripts": {

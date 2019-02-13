@@ -1,6 +1,5 @@
 import React from 'react';
 import Gesture from 'rc-gesture';
-import style from './style';
 
 const rootFontSize = parseFloat(document.documentElement.style.fontSize || 100);
 
@@ -67,7 +66,7 @@ export default class PullToShow extends React.Component {
     // 这时候就没办法触发 onPanEnd 事件，所以最好调用 onTouchEnd 事件来恢复初始状态
     return (
       <Gesture onPanStart={this.onStartStyle} onPanMove={this.onMoveStyle} onTouchEnd={this.onEndStyle}>
-        <div className="pull-to-show-wrapper" ref={el => (this.el = el)} style={Object.assign({}, style, newStyle)}>
+        <div className="pull-to-show-wrapper" ref={el => (this.el = el)} style={newStyle}>
           <div className="pull-to-show-indicator-wrapper">{indicator}</div>
           {children}
         </div>
