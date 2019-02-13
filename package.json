@@ -1,0 +1,37 @@
+{
+  "name": "rc-pull-to-show",
+  "version": "1.0.0",
+  "description": "A React Component, pull down the page to show an extra image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gemwuu/rc-pull-to-show.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "image",
+    "gesture"
+  ],
+  "author": "gemwuu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gemwuu/rc-pull-to-show/issues"
+  },
+  "homepage": "https://github.com/gemwuu/rc-pull-to-show#readme",
+  "dependencies": {
+    "rc-gesture": "^0.0.22",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-module-resolver": "^2.4.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "dora": "^0.6.1",
+    "dora-plugin-webpack": "^0.6.5"
+  }
+}
