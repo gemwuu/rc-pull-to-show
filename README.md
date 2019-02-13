@@ -6,6 +6,7 @@ npm i -S rc-pull-to-show
 ```
 
 ## Usage
+*Notes: you need to process the less file yourself.*
 ```javascript
 import React from 'react';
 import PullToShow from 'rc-pull-to-show';

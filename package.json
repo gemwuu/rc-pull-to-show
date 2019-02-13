@@ -1,10 +1,10 @@
 {
   "name": "rc-pull-to-show",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React Component, pull down the page to show an extra image.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib && cp src/index.less lib"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,6 @@
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-module-resolver": "^2.4.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "styled-jsx": "^3.2.1"
+    "babel-plugin-transform-runtime": "^6.23.0"
   }
 }
