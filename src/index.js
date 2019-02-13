@@ -1,16 +1,14 @@
 import React from 'react';
 import Gesture from 'rc-gesture';
-import 'index.less';
+import style from './style';
 
 const rootFontSize = parseFloat(document.documentElement.style.fontSize || 100);
 
-/*
+/**
  * 1. 如果没有 indicator 就默认不显示内容
  * 2. 手松开的时候自动弹回去
  * 3. 最好禁止页面的 bounce 效果
  */
-
-
 export default class PullToShow extends React.Component {
   constructor(props) {
     super(props);
@@ -69,7 +67,7 @@ export default class PullToShow extends React.Component {
     // 这时候就没办法触发 onPanEnd 事件，所以最好调用 onTouchEnd 事件来恢复初始状态
     return (
       <Gesture onPanStart={this.onStartStyle} onPanMove={this.onMoveStyle} onTouchEnd={this.onEndStyle}>
-        <div className="pull-to-show-wrapper" ref={el => (this.el = el)} style={newStyle}>
+        <div className="pull-to-show-wrapper" ref={el => (this.el = el)} style={Object.assign({}, style, newStyle)}>
           <div className="pull-to-show-indicator-wrapper">{indicator}</div>
           {children}
         </div>

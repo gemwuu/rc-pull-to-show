@@ -6,7 +6,6 @@ npm i -S rc-pull-to-show
 ```
 
 ## Usage
-*Notes: you need to process the less file yourself.*
 ```javascript
 import React from 'react';
 import PullToShow from 'rc-pull-to-show';
@@ -26,9 +25,18 @@ export default function Container(props) {
 }
 
 ```
+Besides, you need to adapt to image css, e.g.
+```less
+.pull-to-show-indicator-wrapper {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+```
 
 ## Demo
-![demo](https://gw.alipayobjects.com/mdn/wealth_prod/afts/img/A*fnfYQaiAioAAAAAAAAAAAABjAQAAAQ/original)
+[demo gif](https://gw.alipayobjects.com/mdn/wealth_prod/afts/img/A*fnfYQaiAioAAAAAAAAAAAABjAQAAAQ/original)
 
 ## Compatibility
 This component tested under React-15.5.4 and above. Lower versions might work but are not tested.
